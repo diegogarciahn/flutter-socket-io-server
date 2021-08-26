@@ -28,6 +28,15 @@
             console.log('Escuchando: ', payload);
         });
 
+        socket.on('nuevo-mensaje', function(payload){
+            console.log('Estoy escuchando esto: ', payload);
+        });
+        
+        socket.on('active-bands', function( bands ){
+            console.clear();
+            console.table( bands );
+        });
+
     </script>
 </body>
 </html>
